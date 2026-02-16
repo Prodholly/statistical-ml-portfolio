@@ -83,3 +83,5 @@ Run all cells in order. MNIST downloads automatically on first run (~11 MB).
 - The Perceptron Convergence Theorem guarantees convergence in finite steps for linearly separable data. MNIST digit 2 vs. 6 is nearly linearly separable in raw pixel space.
 - Online learning (sample-by-sample updates) allows the perceptron to make ~435 weight corrections in a single pass and immediately satisfy the 95% accuracy threshold.
 - The learned weight image provides an interpretable visualization of the decision boundary in pixel space.
+
+emmanuel adeloju
