@@ -8,7 +8,7 @@
 
 This repository contains rigorous implementations of fundamental supervised learning algorithms, developed as part of a graduate-level Statistical Machine Learning course. Each module covers theoretical foundations, a clean from-scratch implementation, empirical evaluation, and analysis of learning dynamics including convergence behavior and bias-variance tradeoffs.
 
-All experiments are conducted on the **MNIST handwritten digit dataset** (binary classification: digit 2 vs. digit 6), providing a consistent benchmark across algorithms.
+Modules 01–06 are evaluated on the **MNIST handwritten digit dataset** (binary classification: digit 2 vs. digit 6). Later modules cover clustering (2D data), neural networks (Fashion MNIST), and reinforcement learning (GridWorld).
 
 ---
 
@@ -40,6 +40,18 @@ statistical-ml-portfolio/
 │   ├── regression.ipynb
 │   ├── results/
 │   └── README.md
+├── 07_clustering/          # K-Means clustering (from scratch, vectorized)
+│   ├── clustering.ipynb
+│   ├── results/
+│   └── README.md
+├── 08_neural_network/      # Feedforward NN on Fashion MNIST (TensorFlow/Keras)
+│   ├── neural_network.ipynb
+│   ├── results/
+│   └── README.md
+├── 09_reinforcement_learning/  # TD(0), Q-Learning, SARSA on GridWorld
+│   ├── reinforcement_learning.ipynb
+│   ├── results/
+│   └── README.md
 ├── requirements.txt
 └── README.md
 ```
@@ -56,6 +68,9 @@ statistical-ml-portfolio/
 | 04 | [Kernel k-NN](./04_kernel_knn/) | MNIST (2 vs 6) | RBF kernel similarity · k∈{3,5} |
 | 05 | [Bayes Classifier](./05_bayes_classifier/) | Gaussian generative model | MAP rule · Bayes error = 2.05% |
 | 06 | [Linear & Logistic Regression](./06_regression/) | MNIST (2 vs 6) + Polynomial | BGD/SGD · ROC · 10-fold CV |
+| 07 | [K-Means Clustering](./07_clustering/) | 2D (hw4_data.mat) | k∈{2,3,4} · 4 inits · Elbow method |
+| 08 | [Neural Network](./08_neural_network/) | Fashion MNIST (10 classes) | 86.88% test acc · Adam · 5 epochs |
+| 09 | [Reinforcement Learning](./09_reinforcement_learning/) | GridWorld (4×4) | TD(0) · Q-Learning · SARSA ε∈{0.05,0.1,0.2,0.5} |
 
 ---
 
@@ -91,6 +106,26 @@ statistical-ml-portfolio/
 
 > Model selection comparison and cross-validation plots are generated when the full notebook is run (k-SVM sweep required).
 
+### 07 — K-Means Clustering
+
+| k = 2 | k = 3 | k = 4 |
+|:-:|:-:|:-:|
+| ![](07_clustering/results/kmeans_k2.png) | ![](07_clustering/results/kmeans_k3.png) | ![](07_clustering/results/kmeans_k4.png) |
+
+![Elbow Curve](07_clustering/results/kmeans_elbow.png)
+
+### 08 — Neural Network (Fashion MNIST)
+
+| Sample Images | Training History | Test Predictions |
+|:-:|:-:|:-:|
+| ![](08_neural_network/results/fashion_sample_grid.png) | ![](08_neural_network/results/nn_training_history.png) | ![](08_neural_network/results/nn_predictions.png) |
+
+### 09 — Reinforcement Learning (GridWorld)
+
+| TD(0) Value Function | Q-Learning Policy | Algorithm Comparison |
+|:-:|:-:|:-:|
+| ![](09_reinforcement_learning/results/td_value_function.png) | ![](09_reinforcement_learning/results/qlearning_policy.png) | ![](09_reinforcement_learning/results/rl_comparison.png) |
+
 ---
 
 ## Key Technical Highlights
@@ -101,7 +136,9 @@ statistical-ml-portfolio/
 - **Kernel k-NN**: Vectorized RBF kernel matrix via broadcasting; implicit RKHS feature comparison without explicit feature maps.
 - **Bayes Classifier**: Analytical MAP decision rule derivation for Gaussian generative model; Bayes error rate computed via numerical integration.
 - **Linear & Logistic Regression**: GD trace, polynomial overfitting analysis, BGD vs SGD comparison with ROC curves and AUC, 10-fold cross-validation for σ selection.
-- All implementations are written in **pure NumPy** — no scikit-learn model APIs — demonstrating deep understanding of the underlying mathematics.
+- **K-Means Clustering**: Vectorized distance computation via squared-norm expansion; initialization sensitivity analysis across k∈{2,3,4} and 4 random seeds; elbow method for k selection.
+- **Neural Network**: Feedforward architecture (784→128→64→10) trained with Adam on Fashion MNIST; training/validation history with 86.88% test accuracy; per-class prediction visualization.
+- **Reinforcement Learning**: TD(0) value estimation under random policy; Q-Learning (off-policy) and SARSA (on-policy, ε-greedy) on 4×4 GridWorld; comparison of V(S1) across algorithms and ε values.
 
 ---
 
@@ -127,7 +164,8 @@ jupyter notebook 01_perceptron/perceptron.ipynb
 |---------|---------|
 | `numpy` | Numerical computation |
 | `matplotlib` | Visualization |
-| `tensorflow` | MNIST dataset loader only |
+| `tensorflow` | MNIST / Fashion MNIST dataset loader; neural network (module 08) |
+| `scipy` | `.mat` file loading (module 07) |
 | `jupyter` | Notebook environment |
 
 ---
