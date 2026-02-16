@@ -6,7 +6,12 @@
 
 ## Problem Statement
 
-Given a training set $\{(\mathbf{x}_i, y_i)\}_{i=1}^{n}$ where $\mathbf{x}_i \in \mathbb{R}^d$ and $y_i \in \{-1, +1\}$, learn a linear classifier $h(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{x})$ by iteratively correcting misclassified examples.
+Given a training set {(xᵢ, yᵢ)} for i = 1,…,n where xᵢ ∈ Rᵈ and yᵢ ∈ {−1, +1}, 
+learn a linear classifier
+
+h(x) = sign(wᵀx)
+
+by iteratively correcting misclassified examples.
 
 **Binary task**: MNIST digit **2** (label −1) vs. digit **6** (label +1).
 
