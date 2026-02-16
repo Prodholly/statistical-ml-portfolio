@@ -60,6 +60,8 @@ Solved for $C \in \{1, 3, 5\}$ on the full training set (11,876 samples).
 | Soft-Margin SVM C=3      | — | — | See notebook |
 | Soft-Margin SVM C=5      | — | — | See notebook |
 
+![SVM Results Summary](results/svm_results_summary.png)
+
 **Key insight on Kernel SVM**: With σ=1 and 784-dimensional inputs, all pairwise RBF similarities collapse near zero, making all samples support vectors. In high dimensions, σ should scale as $\sigma \sim \sqrt{d}$ (here σ ≈ 28). This is a well-known curse-of-dimensionality effect on the RBF kernel.
 
 **Primal vs. Dual agreement**: Both hard-margin formulations achieve identical training accuracy (100%) and near-identical test accuracy (~97.7–97.8%), confirming strong duality holds and the implementations are consistent.

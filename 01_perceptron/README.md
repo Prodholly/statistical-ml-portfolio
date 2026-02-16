@@ -61,9 +61,11 @@ The near-identical train and test losses indicate minimal overfitting — the le
 
 **Convergence curve** — training accuracy vs. epoch count for each stopping criterion.
 
+![Perceptron Convergence](results/perceptron_convergence.png)
+
 **Weight visualization** — the learned weight vector $\mathbf{w}[1:]$ reshaped to 28×28 reveals which pixel regions the classifier focuses on. Red regions contribute positively toward class +1 (digit 6); blue regions toward class −1 (digit 2).
 
-Results are saved to `results/`.
+![Learned Weight Vector](results/perceptron_weights.png)
 
 ---
 

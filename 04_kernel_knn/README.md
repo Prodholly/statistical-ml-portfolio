@@ -83,6 +83,12 @@ jupyter notebook kernel_knn.ipynb
 
 ---
 
+## Visualizations
+
+![Kernel k-NN Analysis](results/kernel_knn_analysis.png)
+
+---
+
 ## Key Takeaways
 
 - The RBF kernel induces an infinite-dimensional feature space — kernel k-NN implicitly compares points in this space without ever computing the feature map explicitly.

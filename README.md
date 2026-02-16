@@ -32,6 +32,10 @@ statistical-ml-portfolio/
 │   ├── kernel_knn.ipynb
 │   ├── results/
 │   └── README.md
+├── 05_bayes_classifier/    # Bayesian binary classifier (MAP rule, Bayes error)
+│   ├── bayes_classifier.ipynb
+│   ├── results/
+│   └── README.md
 ├── requirements.txt
 └── README.md
 ```
@@ -46,6 +50,33 @@ statistical-ml-portfolio/
 | 02 | [k-Nearest Neighbor](./02_knn/) | MNIST (2 vs 6) | Best k=3 · Test Loss = 0.006 |
 | 03 | [Support Vector Machine](./03_svm/) | MNIST (2 vs 6) | Hard-margin, dual, RBF kernel, soft-margin C∈{1,3,5} |
 | 04 | [Kernel k-NN](./04_kernel_knn/) | MNIST (2 vs 6) | RBF kernel similarity · k∈{3,5} |
+| 05 | [Bayes Classifier](./05_bayes_classifier/) | Gaussian generative model | MAP rule · Bayes error = 2.05% |
+
+---
+
+## Result Previews
+
+### 01 — Perceptron
+
+| Convergence | Learned Weights |
+|:-----------:|:---------------:|
+| ![](01_perceptron/results/perceptron_convergence.png) | ![](01_perceptron/results/perceptron_weights.png) |
+
+### 02 — k-Nearest Neighbor
+
+![](02_knn/results/knn_error_analysis.png)
+
+### 03 — Support Vector Machine
+
+![](03_svm/results/svm_results_summary.png)
+
+### 04 — Kernel k-NN
+
+![](04_kernel_knn/results/kernel_knn_analysis.png)
+
+### 05 — Bayes Classifier
+
+![](05_bayes_classifier/results/bayes_classifier.png)
 
 ---
 
@@ -55,6 +86,7 @@ statistical-ml-portfolio/
 - **k-NN**: Vectorized distance computation with `np.argpartition` for O(n) neighbor selection; bias-variance analysis across k.
 - **SVM**: Full pipeline — primal SLSQP, Lagrangian dual, Gram matrix kernel trick, and soft-margin C-SVM with slack variables.
 - **Kernel k-NN**: Vectorized RBF kernel matrix via broadcasting; implicit RKHS feature comparison without explicit feature maps.
+- **Bayes Classifier**: Analytical MAP decision rule derivation for Gaussian generative model; Bayes error rate computed via numerical integration.
 - All implementations are written in **pure NumPy** — no scikit-learn model APIs — demonstrating deep understanding of the underlying mathematics.
 
 ---

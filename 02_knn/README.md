@@ -83,7 +83,7 @@ With n=1,000, m=1,990, d=784: ≈ 1.56 billion FLOPs for the full evaluation swe
 - **Error vs k**: Side-by-side plot of train and test 0-1 loss across k values.
 - **Generalization gap**: Test − train error as a function of k, highlighting the bias-variance tradeoff.
 
-Results saved to `results/`.
+![k-NN Error Analysis](results/knn_error_analysis.png)
 
 ---
 
