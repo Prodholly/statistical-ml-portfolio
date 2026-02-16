@@ -6,12 +6,12 @@
 
 ## Sections
 
-| # | Topic | Points |
+| # | Topic | diff |
 |---|-------|--------|
-| 1 | [Model Selection — k-SVM σ sweep, comparison table](#section-1-model-selection) | 20 |
-| 2 | [Linear Regression — manual GD trace, polynomial overfitting](#section-2-linear-regression) | 20 |
-| 3 | [Logistic Regression — BGD, SGD, ROC curves](#section-3-logistic-regression) | 40 |
-| 4 | [K-Fold Cross Validation — 10-fold CV for σ selection](#section-4-k-fold-cross-validation) | 20 |
+| 1 | [Model Selection — k-SVM σ sweep, comparison table](#section-1-model-selection) | 1 |
+| 2 | [Linear Regression — manual GD trace, polynomial overfitting](#section-2-linear-regression) | 3 |
+| 3 | [Logistic Regression — BGD, SGD, ROC curves](#section-3-logistic-regression) | 2 |
+| 4 | [K-Fold Cross Validation — 10-fold CV for σ selection](#section-4-k-fold-cross-validation) | 4 |
 
 ---
 
