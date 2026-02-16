@@ -85,13 +85,11 @@ statistical-ml-portfolio/
 
 ### 06 — Linear & Logistic Regression / Model Selection
 
-| Model Selection | Polynomial Regression |
-|:-:|:-:|
-| ![](06_regression/results/model_selection_comparison.png) | ![](06_regression/results/polynomial_regression.png) |
-
-| BGD Convergence | ROC Curves | Cross-Validation |
+| Polynomial Regression | BGD Convergence | ROC Curves |
 |:-:|:-:|:-:|
-| ![](06_regression/results/logistic_bgd_convergence.png) | ![](06_regression/results/logistic_roc_curves.png) | ![](06_regression/results/cross_validation.png) |
+| ![](06_regression/results/polynomial_regression.png) | ![](06_regression/results/logistic_bgd_convergence.png) | ![](06_regression/results/logistic_roc_curves.png) |
+
+> Model selection comparison and cross-validation plots are generated when the full notebook is run (k-SVM sweep required).
 
 ---
 
