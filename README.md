@@ -36,6 +36,10 @@ statistical-ml-portfolio/
 │   ├── bayes_classifier.ipynb
 │   ├── results/
 │   └── README.md
+├── 06_regression/          # Linear regression, logistic regression, model selection, k-fold CV
+│   ├── regression.ipynb
+│   ├── results/
+│   └── README.md
 ├── requirements.txt
 └── README.md
 ```
@@ -51,6 +55,7 @@ statistical-ml-portfolio/
 | 03 | [Support Vector Machine](./03_svm/) | MNIST (2 vs 6) | Hard-margin, dual, RBF kernel, soft-margin C∈{1,3,5} |
 | 04 | [Kernel k-NN](./04_kernel_knn/) | MNIST (2 vs 6) | RBF kernel similarity · k∈{3,5} |
 | 05 | [Bayes Classifier](./05_bayes_classifier/) | Gaussian generative model | MAP rule · Bayes error = 2.05% |
+| 06 | [Linear & Logistic Regression](./06_regression/) | MNIST (2 vs 6) + Polynomial | BGD/SGD · ROC · 10-fold CV |
 
 ---
 
@@ -78,6 +83,16 @@ statistical-ml-portfolio/
 
 ![](05_bayes_classifier/results/bayes_classifier.png)
 
+### 06 — Linear & Logistic Regression / Model Selection
+
+| Model Selection | Polynomial Regression |
+|:-:|:-:|
+| ![](06_regression/results/model_selection_comparison.png) | ![](06_regression/results/polynomial_regression.png) |
+
+| BGD Convergence | ROC Curves | Cross-Validation |
+|:-:|:-:|:-:|
+| ![](06_regression/results/logistic_bgd_convergence.png) | ![](06_regression/results/logistic_roc_curves.png) | ![](06_regression/results/cross_validation.png) |
+
 ---
 
 ## Key Technical Highlights
@@ -87,6 +102,7 @@ statistical-ml-portfolio/
 - **SVM**: Full pipeline — primal SLSQP, Lagrangian dual, Gram matrix kernel trick, and soft-margin C-SVM with slack variables.
 - **Kernel k-NN**: Vectorized RBF kernel matrix via broadcasting; implicit RKHS feature comparison without explicit feature maps.
 - **Bayes Classifier**: Analytical MAP decision rule derivation for Gaussian generative model; Bayes error rate computed via numerical integration.
+- **Linear & Logistic Regression**: GD trace, polynomial overfitting analysis, BGD vs SGD comparison with ROC curves and AUC, 10-fold cross-validation for σ selection.
 - All implementations are written in **pure NumPy** — no scikit-learn model APIs — demonstrating deep understanding of the underlying mathematics.
 
 ---
