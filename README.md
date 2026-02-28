@@ -1,6 +1,6 @@
 # Statistical Machine Learning — Implementation Portfolio
 
-# Records Assignments from EEE 549 Statistical Machine Learning at Arizona State University
+# Records of My Assignments from EEE 549 Statistical Machine Learning at Arizona State University
 
 > End-to-end implementations of core statistical machine learning algorithms from scratch using NumPy, evaluated on benchmark image classification tasks.
 
